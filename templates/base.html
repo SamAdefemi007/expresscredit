@@ -1,0 +1,119 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}Express Credit {% endblock %}
+
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" href="./static/styles.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+{% endblock %}
+
+{% block navbar%}
+<nav id="navnav"  class="navbar navbar-default navbar-fixed-top">
+  <div id="top-nav" class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img id="logo" class="img-responsive" src="./static/logo2.png"/></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="#"><i class="fa-solid fa-house-user fa-2xl"></i><span class="sr-only">(current)</span></a></li>
+        <li>
+	        <a href="#">Check eligibility</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply for a loan<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Retail loan</a></li>
+	          <li role="separator" class="divider"></li>
+            <li><a href="#">SME loan</a></li>
+	          <li role="separator" class="divider"></li>
+            <li><a href="#">Corporate loan</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Talk to a credit advisor</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+	      <li><a href="#">FX Services</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+	      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Financial products <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Insurance</a></li>
+            <li><a href="#">Mortgage</a></li>
+            <li><a href="#">Credit card</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Pay-day loan</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact us</a></li>
+	      <button class=" btn btn-info navbar-btn">Login</button>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+{% endblock %}
+
+{% block content %}
+	<div id="page_cont">
+	{% block page_content %}
+	{% endblock %}
+
+	</div>
+
+
+
+	{% block footer %}
+
+
+    <!-- FOOTER -->
+
+    <footer id="footer" class="w-100 py-4 flex-shrink-0">
+        <div class="container-fluid py-4 border">
+            <div class="row gy-2 gx-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="h4 text-white">Express Credit</h5>
+                    <p class="small text-muted">Providing quick and reliable access to credit for all income class</p>
+                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">expresscredit.com</a></p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Quick links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Get started</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-3">Newsletter</h5>
+                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <form action="#">
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+	{% endblock %}
+
+{% endblock %}
